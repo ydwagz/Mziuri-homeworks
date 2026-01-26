@@ -1,7 +1,7 @@
 # 1
 
 with open("first numbers.txt", "r", encoding="utf-8") as f1, \
-     open("second numbers.txt", "w", encoding="utf-8") as f2:
+     open("Second numbers.txt", "w", encoding="utf-8") as f2:
 
     for line in f1:
         f1_pow = int(line) ** 2
