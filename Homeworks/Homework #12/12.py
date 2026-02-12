@@ -3,10 +3,9 @@ print("----------------")
 
 correct = 0
 while correct == 0:
-    num1 = int(input("Enter a number: "))
-    num2 = int(input("Enter another number: "))
-
     try:
+        num1 = int(input("Enter a number: "))
+        num2 = int(input("Enter another number: "))
         result = num1/num2
         print(result)
     except ValueError:
@@ -20,10 +19,10 @@ while correct == 0:
         while correct == 1:
             #2
             print("----------------")
-            num1 = int(input("Enter a number: "))
-            num2 = int(input("Enter another number: "))
             try:
-                result = num1/num2
+                num1 = int(input("Enter a number: "))
+                num2 = int(input("Enter another number: "))
+                result = num1 / num2
                 print(result)
             except ZeroDivisionError as message:
                 print("You can't use letters or symbols")
