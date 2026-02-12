@@ -64,7 +64,7 @@ while correct == 0:
                                     b = int(input("Enter a number: "))
                                     c = int(input("Enter a number: "))
 
-                                    if a + b > c or a + c > b or b + c > a or a == b ==c:
+                                    if a + b > c and a + c > b and b + c > a or a == b ==c:
                                         print("this triangle is possible to make")
 
                                 except ValueError as message:
