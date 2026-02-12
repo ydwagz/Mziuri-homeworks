@@ -9,7 +9,7 @@ while correct == 0:
     try:
         result = num1/num2
         print(result)
-    except ValueError as message:
+    except ValueError:
         print("You can't use letters or symbols")
 
     except ZeroDivisionError as message:
@@ -28,7 +28,7 @@ while correct == 0:
             except ZeroDivisionError as message:
                 print("You can't use letters or symbols")
 
-            except ValueError as message:
+            except ValueError:
                 print("You can't use letters or symbols")
 
             else:
@@ -67,7 +67,7 @@ while correct == 0:
                                     if a + b > c and a + c > b and b + c > a or a == b ==c:
                                         print("this triangle is possible to make")
 
-                                except ValueError as message:
+                                except ValueError:
                                     print("You can't use letters or symbols")
                                     break
 
