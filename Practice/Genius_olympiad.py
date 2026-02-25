@@ -34,3 +34,4 @@ def Find_triplets(*args):
 
 Find_triplets(5, 5, 3, 2, 8, 5)
 
+
