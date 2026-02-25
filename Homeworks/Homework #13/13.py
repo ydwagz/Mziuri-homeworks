@@ -29,6 +29,9 @@ class School:
             student.get_info()
 
 
+# ეს ნაწილი დამავიწყდა
+#       |
+#       V
 
 school = School("მზიური", "ვაჯაფშაველას ქუჩა")
 
