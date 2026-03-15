@@ -30,6 +30,7 @@ while correct == 0:
             except ValueError:
                 print("You can't use letters or symbols")
 
+
             else:
                 correct += 1
                 #3

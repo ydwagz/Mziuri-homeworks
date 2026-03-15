@@ -29,3 +29,4 @@ except FileNotFoundError:
         text = input("Enter a text that you want to write in this file: ")
         f1.write(text + "\n")
         print("text added successfully")
+
