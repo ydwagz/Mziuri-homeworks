@@ -1,0 +1,71 @@
+Participant: Luka
+Language: Python 3
+Problems Attempted: 6 / 7 (Problems 1–6)
+Total Score: 60 / 160 pts
+Score Summary
+# Problem Score Verdict
+1 Carbon Footprint 0/10 ❌ Wrong Answer
+2 Water Reservoir 0/10 ❌ Wrong Answer
+3 Reforestation 20/20 ✅ Accepted
+4 Recycling Plant 0/20 ❌ Wrong Answer
+5 Solar Panel Optimization 30/30 ✅ Accepted
+6 Cleanup Route 10/30 ⚠️ Partial — Logic Correct
+7 Air Quality Simulator -/40 — Not attempted
+TOTAL 60/160
+
+Detailed Problem Feedback
+Problem 1 — Carbon Footprint (+0/10 pts) ❌
+The core logic (sum, average, count above average) is correct, but several output issues
+prevent acceptance:
+• input() calls contain prompt strings (e.g. "Enter the number of days: ") which interfere
+with automated judging
+• Output label "total days:" should be "Total:" (prints days count, not total emissions)
+• The error-check block (if total_co2 > days) is incorrect logic and causes wrong output
+on valid inputs
+• Average is not rounded to 1 decimal place
+• Separator line print("---...") is not part of the expected output
+Problem 2 — Water Reservoir (+0/10 pts) ❌
+Same logic error as Problem 2 in another submission: the code computes value = capacity ×
+fill_percent (absolute volume) instead of comparing fill percentages directly. Reservoir 3 has
+the largest absolute volume (2000×45=90,000) but is only 45% full — the least full. The fix is
+to compare fill_percent values only, discarding capacity.
+Problem 3 — Reforestation (+20/20 pts) ✅
+
+Excellent. The multi-source BFS implementation is clean, correct, and uses proper cardinal
+directions (up/down/left/right). Boundary checking with 0 <= nx < n is correctly implemented.
+This is the right algorithm, well executed.
+Problem 4 — Recycling Plant (+0/20 pts) ❌
+The accumulation logic is correct, but the output format has multiple issues:
+• "kg." should be " kg" (space before, no full stop)
+• Percentages use 2 decimal places: expected 1 decimal place, e.g. 38.1% not 38.10%
+• Percentages use no parentheses: expected "(38.1%)" not "38.10%"
+• Output order should be Plastic, Glass, Metal — not Plastic, Metal, Glass
+• "Most common: <type>" line is missing entirely
+Problem 5 — Solar Panel Optimization (+30/30 pts) ✅
+Correct. Clean 0/1 Knapsack DP with proper reverse iteration. The prompt strings in input()
+calls would cause issues on an automated judge but the algorithm is fully correct. Score
+awarded for correct logic.
+Problem 6 — Cleanup Route (+10/30 pts) ⚠️
+The Dijkstra implementation and greedy nearest-neighbour TSP are both correctly structured
+and produce the right answer (18) on the sample input. Points deducted because all
+problems are combined in a single file with separator lines and prompt strings in input() calls,
+which would cause runtime errors on an automated judge reading clean input. The
+algorithmic approach is solid.
+Problem 7 — Air Quality Simulator (not attempted)
+No submission found for this problem.
+
+Overall Assessment
+Luka attempted 6 out of 7 problems and demonstrated strong algorithmic skills, particularly
+on Problems 3, 5, and 6. The Reforestation BFS and Knapsack DP are both textbook-quality
+solutions. The main issue throughout is output formatting — prompt strings in input(),
+incorrect labels, and missing output lines account for most of the lost points.
+Strengths:
+• Excellent BFS implementation for P3 (correct directions and boundary checks)
+• Correct Knapsack DP for P5
+• Correct Dijkstra + greedy TSP for P6
+Areas for Improvement:
+• Never use prompt strings in input() for competitive programming — use plain input()
+• Submit each problem as a separate file
+• Match output labels and format exactly (spacing, units, decimal places, parentheses)
+• Rank reservoirs by fill percentage only, not capacity × fill
+GENIUS Olympiad Georgia 2026 — Grading Committee
